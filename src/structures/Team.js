@@ -18,7 +18,11 @@
 
 */
 
+<<<<<<< HEAD
 const Client = require('../../index');
+=======
+const Client = require('../../index');
+>>>>>>> a5d35659ab463d82b152c0daa7320bf4fe349826
 const Player = require('./Player.js');
 
 class Team {

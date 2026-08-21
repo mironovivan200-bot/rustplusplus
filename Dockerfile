@@ -8,4 +8,7 @@ COPY . /app
 RUN npm run build && \
     tar -c --exclude='./dist' --exclude='./node_modules' --exclude='./.git' \
            --exclude='*.ts' --exclude='*.js' -f - . | tar -x -f - -C dist
-CMD ["node", "dist/index.js"]
+
+RUN chmod +x /app/entrypoint.sh
+
+CMD ["/app/entrypoint.sh"]
